@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1768812982478" clover="3.2.0">
+  <project timestamp="1768812982478" name="All files">
+    <metrics statements="46" coveredstatements="46" conditionals="12" coveredconditionals="12" methods="20" coveredmethods="20" elements="78" coveredelements="78" complexity="0" loc="46" ncloc="46" packages="3" files="3" classes="3"/>
+    <package name="__mocks__">
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="testData.js" path="/Users/davidramos/Work/projectos/disc/disc-app/src/__mocks__/testData.js">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="24" count="20" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="70" count="4" type="stmt"/>
+        <line num="84" count="4" type="stmt"/>
+        <line num="98" count="4" type="stmt"/>
+        <line num="112" count="4" type="stmt"/>
+        <line num="126" count="4" type="stmt"/>
+        <line num="135" count="1" type="stmt"/>
+        <line num="233" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="data">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="questions.js" path="/Users/davidramos/Work/projectos/disc/disc-app/src/data/questions.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="104" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="34" coveredstatements="34" conditionals="12" coveredconditionals="12" methods="14" coveredmethods="14"/>
+      <file name="scoring.js" path="/Users/davidramos/Work/projectos/disc/disc-app/src/utils/scoring.js">
+        <metrics statements="34" coveredstatements="34" conditionals="12" coveredconditionals="12" methods="14" coveredmethods="14"/>
+        <line num="10" count="40" type="stmt"/>
+        <line num="18" count="40" type="stmt"/>
+        <line num="19" count="640" type="stmt"/>
+        <line num="20" count="640" type="cond" truecount="4" falsecount="0"/>
+        <line num="21" count="622" type="stmt"/>
+        <line num="25" count="40" type="stmt"/>
+        <line num="35" count="9" type="stmt"/>
+        <line num="36" count="9" type="stmt"/>
+        <line num="38" count="9" type="stmt"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="42" count="36" type="stmt"/>
+        <line num="43" count="36" type="stmt"/>
+        <line num="44" count="36" type="stmt"/>
+        <line num="47" count="9" type="stmt"/>
+        <line num="56" count="16" type="stmt"/>
+        <line num="57" count="16" type="stmt"/>
+        <line num="59" count="16" type="stmt"/>
+        <line num="60" count="64" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="37" type="stmt"/>
+        <line num="62" count="37" type="stmt"/>
+        <line num="66" count="16" type="stmt"/>
+        <line num="75" count="8" type="stmt"/>
+        <line num="76" count="32" type="stmt"/>
+        <line num="77" count="35" type="stmt"/>
+        <line num="86" count="11" type="cond" truecount="2" falsecount="0"/>
+        <line num="95" count="6" type="stmt"/>
+        <line num="96" count="6" type="stmt"/>
+        <line num="97" count="6" type="stmt"/>
+        <line num="98" count="6" type="stmt"/>
+        <line num="99" count="6" type="stmt"/>
+        <line num="101" count="6" type="stmt"/>
+        <line num="117" count="26" type="cond" truecount="2" falsecount="0"/>
+        <line num="126" count="24" type="cond" truecount="2" falsecount="0"/>
+        <line num="134" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
