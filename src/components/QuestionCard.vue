@@ -10,18 +10,22 @@
       <v-radio-group
         v-model="selectedValue"
         @update:model-value="handleChange"
-        class="likert-group"
+        class="options-group"
       >
-        <div class="likert-scale d-flex flex-column flex-sm-row justify-space-between">
-          <v-radio
-            v-for="option in likertOptions"
-            :key="option.value"
-            :value="option.value"
-            :label="option.label"
-            class="likert-option"
-            color="primary"
-          />
-        </div>
+        <v-radio
+          v-for="option in question.options"
+          :key="option.id"
+          :value="option.id"
+          class="option-radio mb-3"
+          color="primary"
+        >
+          <template #label>
+            <span class="option-label">
+              <span class="option-letter">{{ option.id }}.</span>
+              {{ option.text }}
+            </span>
+          </template>
+        </v-radio>
       </v-radio-group>
     </v-card-text>
   </v-card>
@@ -29,7 +33,6 @@
 
 <script setup>
 import { ref, watch } from 'vue'
-import { likertOptions } from '../data/questions'
 
 const props = defineProps({
   question: {
@@ -45,7 +48,7 @@ const props = defineProps({
     required: true
   },
   modelValue: {
-    type: Number,
+    type: String,
     default: null
   }
 })
@@ -78,22 +81,34 @@ function handleChange(value) {
   color: #333;
 }
 
-.likert-group {
+.options-group {
   margin-top: 16px;
 }
 
-.likert-scale {
-  gap: 8px;
+.option-radio {
+  align-items: flex-start;
+  min-height: 48px;
 }
 
-.likert-option {
-  flex: 1;
-  min-width: 120px;
+.option-radio :deep(.v-selection-control__wrapper) {
+  margin-top: 2px;
 }
 
-@media (max-width: 600px) {
-  .likert-option {
-    min-width: 100%;
-  }
+.option-label {
+  display: block;
+  line-height: 1.5;
+  padding: 4px 0;
+}
+
+.option-letter {
+  font-weight: 600;
+  margin-right: 8px;
+  color: #1976D2;
+}
+
+/* Highlight selected option */
+.option-radio:has(input:checked) .option-label {
+  color: #1976D2;
+  font-weight: 500;
 }
 </style>

@@ -4,7 +4,7 @@
     <div class="text-center mb-6">
       <h1 class="text-h4 font-weight-bold mb-2">Test DISC</h1>
       <p class="text-body-1 text-grey-darken-1">
-        Répondez honnêtement à chaque question selon votre premier ressenti.
+        Pour chaque situation, choisissez l'option qui correspond le mieux à votre comportement habituel.
       </p>
     </div>
 

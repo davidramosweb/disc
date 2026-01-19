@@ -63,13 +63,13 @@
             <v-row>
               <v-col cols="12" sm="4" class="text-center">
                 <v-icon color="primary" size="40" class="mb-2">mdi-clock-outline</v-icon>
-                <div class="text-h6 font-weight-bold">3-5 min</div>
+                <div class="text-h6 font-weight-bold">5-10 min</div>
                 <div class="text-body-2 text-grey">Durée du test</div>
               </v-col>
               <v-col cols="12" sm="4" class="text-center">
                 <v-icon color="primary" size="40" class="mb-2">mdi-help-circle-outline</v-icon>
-                <div class="text-h6 font-weight-bold">16 questions</div>
-                <div class="text-body-2 text-grey">À répondre</div>
+                <div class="text-h6 font-weight-bold">28 questions</div>
+                <div class="text-body-2 text-grey">Situationnelles</div>
               </v-col>
               <v-col cols="12" sm="4" class="text-center">
                 <v-icon color="primary" size="40" class="mb-2">mdi-chart-pie</v-icon>
@@ -97,7 +97,7 @@
 
         <!-- Footer Note -->
         <p class="text-caption text-grey text-center mt-8">
-          Basé sur le test ODAT (Open DISC Assessment Test) de OpenPsychometrics.
+          Basé sur le Situation-Based DISC Assessment.
           <br>
           Ce test est gratuit et vos réponses restent confidentielles.
         </p>

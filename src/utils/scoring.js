@@ -2,8 +2,8 @@ import { questions, discDescriptions } from '../data/questions'
 
 /**
  * Calculate DISC scores from user answers
- * @param {Object} answers - Object with question IDs as keys and Likert values (1-5) as values
- * @returns {Object} - Object containing scores per category and the primary type
+ * @param {Object} answers - Object with question IDs as keys and option IDs (A, B, C, D) as values
+ * @returns {Object} - Object containing scores per DISC type
  */
 export function calculateScores(answers) {
   // Initialize scores for each DISC category
@@ -14,11 +14,14 @@ export function calculateScores(answers) {
     C: 0
   }
 
-  // Sum up answers by category
+  // Count selections by DISC type
   questions.forEach(question => {
-    const answer = answers[question.id]
-    if (answer !== undefined && answer !== null) {
-      scores[question.category] += answer
+    const selectedOptionId = answers[question.id]
+    if (selectedOptionId) {
+      const option = question.options.find(o => o.id === selectedOptionId)
+      if (option) {
+        scores[option.type]++
+      }
     }
   })
 
@@ -31,17 +34,13 @@ export function calculateScores(answers) {
  * @returns {Object} - Percentage scores for each category
  */
 export function calculatePercentages(scores) {
-  // Each category has 4 questions with max score of 5 each = 20 max
-  const maxScorePerCategory = 20
-  const minScorePerCategory = 4 // Minimum is 1 per question
+  // Max score per type is total questions (28) if all answers map to that type
+  const maxScore = questions.length
 
   const percentages = {}
   
   for (const category in scores) {
-    // Normalize to 0-100 scale
-    const normalizedScore = scores[category] - minScorePerCategory
-    const normalizedMax = maxScorePerCategory - minScorePerCategory
-    percentages[category] = Math.round((normalizedScore / normalizedMax) * 100)
+    percentages[category] = Math.round((scores[category] / maxScore) * 100)
   }
 
   return percentages
@@ -132,4 +131,18 @@ export function getAnsweredCount(answers) {
  */
 export function getTotalQuestions() {
   return questions.length
+}
+
+/**
+ * Get the DISC type for a specific answer
+ * @param {number} questionId - The question ID
+ * @param {string} optionId - The selected option ID (A, B, C, D)
+ * @returns {string|null} - The DISC type or null if not found
+ */
+export function getTypeForAnswer(questionId, optionId) {
+  const question = questions.find(q => q.id === questionId)
+  if (!question) return null
+  
+  const option = question.options.find(o => o.id === optionId)
+  return option ? option.type : null
 }
