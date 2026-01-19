@@ -97,9 +97,9 @@
 
         <!-- Footer Note -->
         <p class="text-caption text-grey text-center mt-8">
-          Basé sur le Situation-Based DISC Assessment.
+          <a href="https://www.teamazing.com/wp-content/uploads/2024/08/Situation-Based_DISC_Assessment.pdf" target="_blank">Basé sur le Situation-Based DISC Assessment.</a>
           <br>
-          Ce test est gratuit et vos réponses restent confidentielles.
+          Ce test est gratuit et 100% confidentiel : vos réponses sont traitées uniquement dans votre navigateur et ne sont enregistrées nulle part.
         </p>
       </v-col>
     </v-row>
